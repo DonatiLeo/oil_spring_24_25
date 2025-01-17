@@ -35,6 +35,8 @@ L’objectif de ce TD est d’apprendre à conteneuriser vos services avec Docke
       ```
     - Vérifiez que chaque service répond correctement à ses endpoints.
 
+---
+
 ### 3. Création du fichier Docker Compose
 
 * **But** : Orchestrer vos services avec Docker Compose pour simplifier leur lancement.
@@ -45,14 +47,16 @@ L’objectif de ce TD est d’apprendre à conteneuriser vos services avec Docke
     - **Vous trouverez un exemple de docker compose dans votre support de cours**
 
 * **Test** :
-- Lancez tous les services simultanément avec :
-  ```bash
-  docker compose up #(-d pour lancer en tâche de fond)
-  ```
-- Arrêtez les services avec :
-  ```bash
-  docker compose down
-  ```
+    - Lancez tous les services simultanément avec :
+      ```bash
+      docker compose up (-d pour lancer en tâche de fond)
+      ```
+    - Arrêtez les services avec :
+      ```bash
+      docker compose down
+      ```
+
+---
 
 ### 4. Gestion des liens entre les services
 
@@ -61,6 +65,8 @@ L’objectif de ce TD est d’apprendre à conteneuriser vos services avec Docke
     - Configurez les URLs des services en fonction des noms des conteneurs définis dans `docker-compose.yml` (e.g., `http://discovery:8083`).
     - Utilisez des variables d’environnement pour gérer dynamiquement les URLs en fonction de l’environnement (local ou Docker).
     - Vous devrez modifier légèrement votre code afin que votre client REST déclaratif (Feign) ne prenne pas directement l'url du service auquel il doit s'adresser en dur
+
+---
 
 ### 5. Script optionnel
 
@@ -72,8 +78,6 @@ docker build -t discovery-service:1.0 ./discovery
 docker compose up
 ```
 Vous devrez produire un script qui fera ça pour tous les services (avec une boucle ou en faisant tout séquentiellement).
-
-----------
 
 ## Livrables
 
