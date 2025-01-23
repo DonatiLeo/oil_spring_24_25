@@ -42,6 +42,8 @@ Le service **Match** :
 4. **Fin de la partie** :
     - Le service **Match** déclare le vainqueur et notifie tous les joueurs des résultats.
 
+![Illustration Flux TD5](./illustrations/diag_services_oil_24_25.png)
+
 
 ## Contraintes techniques
 
